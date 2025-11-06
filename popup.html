@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowByte SafePaste</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛡️ SafePaste</h1>
+      <p class="tagline">Clipboard Protection</p>
+    </header>
+
+    <div class="toggle-section">
+      <label class="toggle-label">
+        <span>Protection</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="protectionToggle" checked>
+          <span class="slider"></span>
+        </div>
+      </label>
+    </div>
+
+    <div class="alerts-section">
+      <h2>Recent Alerts</h2>
+      <div id="alertsList" class="alerts-list">
+        <p class="no-alerts">No alerts yet</p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-text">Protecting your clipboard offline</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
