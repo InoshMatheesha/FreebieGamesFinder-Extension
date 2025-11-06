@@ -1,7 +1,6 @@
 <div align="center"><div align="center"><div align="center">
 
 
-
 # 🍪 Cookie Exporter**A powerful educational tool for understanding browser cookie mechanics and security implications**</div>
 
 
@@ -18,12 +17,12 @@
 
 ![Manifest](https://img.shields.io/badge/manifest-v3-success.svg?style=for-the-badge&logo=google-chrome)
 
-![Purpose](https://img.shields.io/badge/purpose-educational-orange.svg?style=for-the-badge&logo=academia)---A small, educational browser extension for demonstrating how cookie data can be read via extension APIs. Designed for learning, security research, and awareness — not for malicious use.
+![Purpose](https://img.shields.io/badge/purpose-educational-orange.svg?style=for-the-badge&logo=academia)
 
 ![Security](https://img.shields.io/badge/⚡_security-research_tool-red.svg?style=for-the-badge)
 
 
-
+A small, educational browser extension for demonstrating how cookie data can be read via extension APIs. Designed for learning, security research, and awareness — not for malicious use.
 <br>
 
 </div>## Why this exists
