@@ -22,7 +22,7 @@
 
 ## Overview
 
-<center><img src="icon128.png" alt="ShadowByte extension icon showing a centered stylized shield symbol inside a rounded square; flat high-contrast graphic on a plain background; no visible text; conveys a serious secure and professional tone" style="width:128px;height:128px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);margin-bottom:12px;"></center>
+<p align="center"><img src="icon128.png" alt="ShadowByte SafePaste icon" style="display:block;margin:12px auto 8px;width:128px;height:128px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);"></p>
 
 ShadowByte SafePaste is your personal clipboard security guardian. This extension monitors your clipboard activity and protects you from accidentally pasting sensitive information like passwords, credit cards, and private keys into unsafe websites.
 
