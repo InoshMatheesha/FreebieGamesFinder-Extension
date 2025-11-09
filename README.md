@@ -42,17 +42,64 @@ ShadowByte SafePaste is your personal clipboard security guardian. This extensio
 
 ## Installation
 
-```bash
-# Install from Chrome Web Store (Recommended)
-# Visit: chrome.google.com/webstore/...
+<div align="center">
 
-# Or install manually:
-# 1. Download the extension
-# 2. Go to chrome://extensions/
-# 3. Enable "Developer mode"
-# 4. Click "Load unpacked"
-# 5. Select the extension folder
+### 🚀 Quick Setup — Get Started in 30 Seconds!
+
+</div>
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+### 🌐 Chrome Web Store
+**Recommended Method**
+
+1. Visit Chrome Web Store
+2. Click "Add to Chrome"
+3. Confirm permissions
+4. Start using instantly!
+
+[![Install Now](https://img.shields.io/badge/Install-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](chrome://extensions/)
+
+</td>
+<td width="50%" align="center">
+
+### 💻 Developer Mode
+**For Testing & Development**
+
+1. Download or clone this repo
+2. Open `chrome://extensions/`
+3. Enable **Developer mode** (top-right)
+4. Click **Load unpacked**
+5. Select extension folder
+
+[![Developer Guide](https://img.shields.io/badge/View-Developer%20Guide-orange?style=for-the-badge&logo=github)](chrome://extensions/)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+### 📦 **Manual Installation Steps**
+
+```bash
+# Clone the repository
+git clone https://github.com/InoshMatheesha/Clipboard-Extension-TJ.git
+
+# Navigate to chrome://extensions/
+# Toggle "Developer mode" ON
+# Click "Load unpacked" and select the folder
 ```
+
+<img src="https://img.shields.io/badge/Tested%20On-Chrome%20120+-success?style=flat-square&logo=google-chrome" alt="Chrome">
+<img src="https://img.shields.io/badge/Tested%20On-Edge%20120+-success?style=flat-square&logo=microsoft-edge" alt="Edge">
+<img src="https://img.shields.io/badge/Tested%20On-Brave%20Latest-success?style=flat-square&logo=brave" alt="Brave">
+
+**✨ Works on all Chromium-based browsers!**
+
+</div>
 
 ## How It Works
 
