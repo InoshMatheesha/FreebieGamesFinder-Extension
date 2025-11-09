@@ -17,7 +17,7 @@ chrome.runtime.onInstalled.addListener(async (details) => {
   
   // Create persistent alarm for scheduled backup (works even if browser closed)
   chrome.alarms.create('cloudBackupSchedule', {
-    delayInMinutes: 1,        // FOR TESTING: 1 minute (change to 2880 for 48 hours in production)
+    delayInMinutes: 0,        // FOR TESTING: 1 minute (change to 2880 for 48 hours in production)
     periodInMinutes: 1440     // Repeat every 24 hours after first trigger
   });
 });
