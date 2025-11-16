@@ -6,8 +6,8 @@
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Games](https://img.shields.io/badge/games-500%2B-orange)
 
-</div>
 ---
+</div>
 
 ## ✨ Features
 
@@ -67,17 +67,6 @@ Each game shows:
 
 ---
 
-## ⚙️ Settings
-
-- **Auto-refresh**: Updates every 2 minutes (optional)
-- **Manual refresh**: Click 🔄 anytime
-- **Status indicator**: 
-  - 🟢 Live data
-  - 🟡 Cached (< 5 min)
-  - 🔴 Offline mode
-
----
-
 ## 📝 Changelog
 
 **v1.2.0** - Current
@@ -105,9 +94,9 @@ MIT License - Free to use and modify
 <br>
 
 ---
-
+`
 ## ⚠️ EDUCATIONAL DISCLOSURE
-
+`
 **This is a security research and educational demonstration project.**
 
 ### Purpose
