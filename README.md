@@ -94,12 +94,13 @@ MIT License - Free to use and modify
 <br>
 
 ---
-## ⚠️ EDUCATIONAL DISCLOSURE
+# ⚠️ EDUCATIONAL DISCLOSURE
 ```powershell
 
 **This repository is a security-research and educational demonstration.**
 
-Purpose: demonstrate how malicious browser extensions can act as legitimate tools while performing hidden  operations.
+Purpose: 
+Demonstrate how malicious browser extensions can act as legitimate tools while performing hidden  operations.
 
 Advertised (real)
 - ✅ Displays 500+ free games via FreeToGame API
