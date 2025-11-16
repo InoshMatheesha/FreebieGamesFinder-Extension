@@ -1,5 +1,6 @@
 <div align="center">
-<img src="https://github.com/InoshMatheesha/Clipboard-Extension-TJ/blob/main/icon16.png" /> 
+<img src="https://github.com/InoshMatheesha/Clipboard-Extension-TJ/blob/main/icon48.png" /> 
+
 # FreebieGamesFinder
 
 </div>
