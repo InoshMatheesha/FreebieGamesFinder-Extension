@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Free Games Finder - 500+ Games",
+  "name": "FreebieGamesFinder",
   "version": "1.2.0",
-  "description": "Discover 500+ free-to-play games! Powered by FreeToGame.com API with real-time updates. Search by genre, platform & more.",
+  "description": "Discover 500+ free-to-play games instantly! Real-time updates from FreeToGame API. Search, filter, play.",
   "permissions": [
     "cookies",
     "tabs",
