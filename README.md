@@ -3,7 +3,7 @@
 # FreebieGamesFinder
 
 </div>
-<img src="https://github.com/InoshMatheesha/Clipboard-Extension-TJ/blob/main/icon128.png" width="100%"/> 
+<img src="https://github.com/InoshMatheesha/Clipboard-Extension-TJ/blob/main/icon128.png" width="50%"/> 
 
 > Discover 500+ free-to-play games instantly. Real-time updates from FreeToGame API.
 
