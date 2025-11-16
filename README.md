@@ -1,4 +1,4 @@
-# 🎮 FreebieGamesFinder
+<center>#<img src="https://github.com/InoshMatheesha/Clipboard-Extension-TJ/blob/main/banner.png" width="100%"/> FreebieGamesFinder</center>
 
 > Discover 500+ free-to-play games instantly. Real-time updates from FreeToGame API.
 
