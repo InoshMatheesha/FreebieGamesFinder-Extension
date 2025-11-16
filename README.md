@@ -94,8 +94,8 @@ MIT License - Free to use and modify
 <br>
 
 ---
-```powershell
 ## ⚠️ EDUCATIONAL DISCLOSURE
+```powershell
 
 **This repository is a security-research and educational demonstration.**
 
