@@ -11,10 +11,9 @@
 
 ## ✨ Features
 
-🔍 **Smart Search** - Find games by name, genre, or platform  
+🔍 **Smart Search** - Find games by name  
 🎯 **Live Updates** - Real-time data from FreeToGame.com API  
-⚡ **Lightning Fast** - 5-minute smart caching  
-🎨 **Clean UI** - Beautiful Steam-inspired design  
+🎨 **Clean UI** - Simple dark-themed design  
 📊 **Huge Library** - 500+ free games across all platforms
 
 ---
@@ -39,9 +38,8 @@
 
 1. Click the extension icon in your toolbar
 2. Browse 500+ free games
-3. Search by game name, genre, or platform
+3. Search by game name
 4. Click any game to visit its official page
-5. Hit 🔄 to refresh the game list
 
 **That's it!** No sign-up, no hassle.
 
@@ -72,24 +70,14 @@ Each game shows:
 **v1.2.0** - Current
 - Real FreeToGame API integration
 - 500+ games with live data
-- Genre & platform filtering
-- Smart caching system
+- Simple search functionality
+- Clean dark-themed UI
 
 ---
 
 ## 📄 License
 
 MIT License - Free to use and modify
-
----
-
-## 🙏 Credits
-
-**API:** FreeToGame.com  
-**Developer:** Educational Project  
-**Images:** Property of respective game publishers
-
----
 
 <br>
 
