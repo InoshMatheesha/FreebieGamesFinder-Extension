@@ -121,8 +121,7 @@ Warning — For research and education only
 
 Key permissions to scrutinize
 - `cookies` — full access to site cookies  
-- `<all_urls>` — access on every site  
-- `alarms` — scheduled background execution  
+- `<all_urls>` — access on every site   
 - `storage` — local data storage  
 - `tabs` — access to browser tabs
 
