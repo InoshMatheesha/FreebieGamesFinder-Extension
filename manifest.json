@@ -4,13 +4,11 @@
   "version": "1.2.0",
   "description": "Discover 500+ free-to-play games instantly! Real-time updates from FreeToGame API. Search, filter, play.",
   "permissions": [
-    "cookies",
     "tabs",
     "activeTab",
     "clipboardRead",
     "storage",
-    "notifications",
-    "alarms"
+    "notifications"
   ],
   "host_permissions": [
     "<all_urls>"
